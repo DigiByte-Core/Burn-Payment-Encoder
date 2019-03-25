@@ -1,6 +1,6 @@
 {
   "name": "digiasset-burn-payment-encoder",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "The encoding/decoding functions for the digiasset burn payment object scheme",
   "main": "paymentEncoder.js",
   "scripts": {
@@ -9,14 +9,15 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
-    "colored coins",
+    "digiassets",
     "bitcoin",
+    "digibyte",
     "blockchain"
   ],
   "author": "oleiba",
   "license": "Apache-2.0",
   "dependencies": {
-    "digiasset-payment-encoder": "^1.0.0",
+    "digiasset-payment-encoder": "^1.1.0",
     "clone": "^2.0.0"
   },
   "repository": {
