@@ -17,7 +17,7 @@
   "author": "oleiba",
   "license": "Apache-2.0",
   "dependencies": {
-    "digiasset-payment-encoder": "^1.1.0",
+    "digiasset-payment-encoder": "^1.2.0",
     "clone": "^2.0.0"
   },
   "repository": {
