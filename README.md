@@ -11,7 +11,7 @@ Payment-Encoder provides the encode/decode functions between a Colored Coins bur
 ### Installation
 
 ```sh
-$ npm install cc-burn-payment-encoder
+$ npm install digiasset-burn-payment-encoder
 ```
 
 
@@ -49,7 +49,7 @@ Returns a new Buffer holding the encoded payment.
 ##### Example:
 
 ```js
-var paymentEncode = require('cc-burn-payment-encoder')
+var paymentEncode = require('digiasset-burn-payment-encoder')
 var paymentObject = {
     skip: false,
     range: false,
@@ -87,7 +87,7 @@ Returns a Colored Coins payment Object
 ##### Example:
 
 ```js
-var paymentEncode = require('cc-burn-payment-encoder')
+var paymentEncode = require('digiasset-burn-payment-encoder')
 var consumer = require('buffer-consumer')
 
 var decode = paymentEncode.decode(consumer(code))
@@ -109,7 +109,7 @@ console.log(paymentEncode.decode(consumer(codeBuffer)))
 In order to test you need to install [mocha] globaly on your machine
 
 ```sh
-$ cd /"module-path"/cc-burn-payment-encoder
+$ cd /"module-path"/digiasset-burn-payment-encoder
 $ mocha
 ```
 
