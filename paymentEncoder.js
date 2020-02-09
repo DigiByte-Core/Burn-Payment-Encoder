@@ -1,7 +1,7 @@
-var basePaymentEncoder = require('digiasset-payment-encoder')
-var clone = require('clone')
+const basePaymentEncoder = require('digiasset-payment-encoder')
+const clone = require('clone')
 
-var BURN_OUTPUT = 0x1f
+const BURN_OUTPUT = 0x1f
 
 module.exports = {
   // isBurn - is this payment as part of a burn transaction
@@ -31,8 +31,8 @@ module.exports = {
 
   // isBurn - is this payment as part of a burn transaction
   decode: function (consume) {
-    var ans = basePaymentEncoder.decode(consume)
-    var burn = !ans.range && (ans.output === BURN_OUTPUT)
+    const ans = basePaymentEncoder.decode(consume)
+    const burn = !ans.range && (ans.output === BURN_OUTPUT)
     if (burn) {
       ans.burn = true
       delete ans.output
@@ -42,11 +42,11 @@ module.exports = {
   },
 
   encodeBulk: function (paymentsArray, isBurn) {
-    var payments = new Buffer(0)
-    var amountOfPayments = paymentsArray.length
-    for (var i = 0; i < amountOfPayments; i++) {
-      var payment = paymentsArray[i]
-      var paymentCode = this.encode(payment, isBurn)
+    let payments = Buffer.allocUnsafe(0)
+    const amountOfPayments = paymentsArray.length
+    for (let i = 0; i < amountOfPayments; i++) {
+      const payment = paymentsArray[i]
+      const paymentCode = this.encode(payment, isBurn)
       payments = Buffer.concat([payments, paymentCode])
     }
     return payments
