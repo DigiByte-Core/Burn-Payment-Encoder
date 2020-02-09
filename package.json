@@ -1,6 +1,6 @@
 {
   "name": "digiasset-burn-payment-encoder",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The encoding/decoding functions for the digiasset burn payment object scheme",
   "main": "paymentEncoder.js",
   "scripts": {
